@@ -2,13 +2,13 @@
 
 # LinkedIn Profile Scraper using Browser Automation
 
-## 📌 Overview
+## Overview
 
 This project is a robust LinkedIn profile scraper that automates the process of extracting data from at least 200 LinkedIn profiles using browser automation, caching, and LLM-agent integration. It handles various anti-scraping measures, session issues, and optimizations to ensure scalability and reliability.
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. **Login & Session Management**  
    - Automatically logs in using Selenium or Playwright with secure credentials.  
@@ -28,7 +28,7 @@ This project is a robust LinkedIn profile scraper that automates the process of 
 
 ---
 
-## 🛠️ Tools & Libraries Used
+## Tools & Libraries Used
 
 - **Python**
 - **Selenium / Playwright** – Browser automation  
@@ -40,7 +40,7 @@ This project is a robust LinkedIn profile scraper that automates the process of 
 
 ---
 
-## 🔄 Logic Flow
+## Logic Flow
 
 Login → Load URLs → For each profile:
     - Check cache
@@ -52,10 +52,9 @@ Login → Load URLs → For each profile:
     - Summarize and return results
 
 
-
 ---
 
-## 🚧 Challenges & Solutions
+## Challenges & Solutions
 
 ### 1. LinkedIn Anti-Scraping Measures  
 **Problem**: Detected automation → account lock.  
@@ -71,26 +70,31 @@ Login → Load URLs → For each profile:
 
 ---
 
-## 📌 Key Implementation Highlights
+## Key Implementation Highlights
 
-### ✅ Context Limit Handling  
+### Context Limit Handling  
 - Broke long profile content into chunks before sending to LLM.  
 - Used token counters to stay within model's context window.
 
-### ✅ Loop Prevention  
+### Loop Prevention  
 - Maintained visited profile list.  
 - Used caching to skip already-processed entries.
 
-### ✅ Optimizations  
+### Optimizations  
 - Headless option toggle for faster performance.  
 - Parallel scraping with delay randomization.  
 - Suggested future addition: Redis-based job queue for large-scale scraping.
 
 ---
 
-## 📈 Future Improvements
+## Future Improvements
 
 - Use Captcha solver APIs for login automation.  
 - Integrate MongoDB for scalable data storage.  
 - Add dashboard for scraped profile visualization.  
 - Deploy with Docker for easy environment setup.
+
+
+## LOGS
+
+![alt text](image.png)
